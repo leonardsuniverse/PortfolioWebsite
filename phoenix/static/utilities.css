@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #f39c12;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 30px;
+    background-color: #f4f4f4;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.home .typing-text {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.home .btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* About Section */
+.about {
+    padding: 50px 30px;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 30px;
+}
+
+.services-head {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services .card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.services .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Skills, Education, Experience, and Contact Section */
+.skills, .education, .experience, .contact {
+    padding: 50px 30px;
+    font-size: 13px; /* Set font size to 13px */
+}
+
+.skills-head, .education-head, .experience-head, .contact-head {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills-grid, .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skills-grid .skill-item h2,
+.experience-grid .experience-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-content input, 
+.contact-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-content .btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
