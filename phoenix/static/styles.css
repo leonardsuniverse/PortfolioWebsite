@@ -1,253 +1,255 @@
 /* General Reset and Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Header Styling */
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1em 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header .logo {
-    font-size: 1.5em;
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1em;
-  }
-  
-  nav a.active {
-    border-bottom: 2px solid #fff;
-  }
-  
-  /* Home Section Styling */
-  .home {
-    display: flex;
-    align-items: center;
-    padding: 2em;
-    background: #f4f4f4;
-  }
-  
-  .home-img {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Center image within the flex container */
-  }
-  
-  .home-img img {
-    max-width: 56%; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .home-content {
-    flex: 1;
-    margin-left: 1em; /* Margin to place text close to the image */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-  }
-  
-  .home-content h1 {
-    font-size: 23px; /* Font size in pixels */
-  }
-  
-  .home-content h3 {
-    margin-bottom: 0.5em; /* Space between header elements */
-    font-size: 22px; /* Font size in pixels */
-  }
-  
-  .home-content p {
-    margin-bottom: 0.5em; /* Reduced margin for paragraph text */
-    font-size: 21px; /* Font size in pixels */
-  }
-  
-  .social-icons {
-    margin-top: 0.5em; /* Adjusted to bring icons closer to the paragraph */
-    display: flex;
-    gap: 0.5em; /* Space between social icons */
-    align-items: center; /* Align items vertically center if needed */
-  }
-  
-  .social-icons a {
-    color: #333;
-    margin: 0; /* Remove extra margin */
-  }
-  
-  .btn {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .btn-secondary {
-    background: #6c757d;
-  }
-  
-  /* About Section Styling */
-  .about .container {
-    display: flex;
-    align-items: flex-start; /* Align items to the start */
-  }
-  
-  .about .left {
-    flex: 1;
-    margin-left: 5%; /* Space between picture and text */
-    display: flex;
-    justify-content: flex-start; /* Align image within the flex container */
-  }
-  
-  .about .left img {
-    max-width: 100%; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .about .right {
-    flex: 2;
-  }
-  
-  .about .right h1 {
-    margin-left: 150px;
-    font-size: 23px;
-  }
-  
-  .about .right h2,
-  .about .right p {
-    margin-bottom: 1%; /* Space between elements */
-    margin-left: 20%;
-    font-size: 21px;
-  }
-  
-  .about .socials,
-  .about .btn-secondary {
-    margin-left: 20%; /* Set margin-left to 20% */
-  }
-  
-  /* Social Icons Styling */
-  .socials {
-    display: flex;
-    gap: 0.5em;
-    align-items: center; /* Align items vertically center if needed */
-  }
-  
-  .socials a {
-    color: #333;
-    margin: 0; /* Remove extra margin */
-  }
-  
-  .btn-secondary {
-    background: #6c757d;
-  }
-  
-  /* Services Section Styling */
-  .services {
-    padding: 2em;
-    background: #fff;
-  }
-  
-  .card-grid {
-    display: flex;
-    gap: 1em;
-  }
-  
-  .card {
-    background: #f8f9fa;
-    padding: 1em;
-    border-radius: 5px;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Skills Section Styling */
-  .skills, .education, .experience, .contact {
-    padding: 2em;
-    background: #f9f9f9;
-  }
-  
-  .skills-grid, .experience-grid {
-    display: flex;
-    gap: 1em;
-  }
-  
-  .skill-item, .experience-item {
-    background: #fff;
-    padding: 1em;
-    border-radius: 5px;
-  }
-  
-  /* Education Section Styling */
-  .education-content {
-    background: #fff;
-    padding: 1em;
-    border-radius: 5px;
-  }
-  
-  /* Contact Section Styling */
-  .contact-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-  
-  .contact-content input, 
-  .contact-content textarea {
-    padding: 0.5em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 50%; /* Adjust the width of text boxes */
-  }
-  
-  .contact-content button {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50%; /* Adjust the width of button */
-  }
-  
-  .contact-content button:hover {
-    background: #0056b3;
-  }
-  
-  /* Logo Styling */
-  .logo img {
-    height: 50px; /* Adjust the height as needed */
-    width: 60px; /* Maintain aspect ratio */
-    display: block; /* Ensure it is not inline */
-    margin: 0 auto; /* Center the logo if needed */
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Home Section Styling */
+.home {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  background: #f4f4f4;
+}
+
+.home-img {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center image within the flex container */
+}
+
+.home-img img {
+  max-width: 56%; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.home-content {
+  flex: 1;
+  margin-left: 1em; /* Margin to place text close to the image */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.home-content h1 {
+  font-size: 20px; /* Font size in pixels */
+}
+
+.home-content h3 {
+  margin-bottom: 0.5em; /* Space between header elements */
+  font-size: 19px; /* Font size in pixels */
+}
+
+.home-content p {
+  margin-bottom: 0.5em; /* Reduced margin for paragraph text */
+  font-size: 18px; /* Font size in pixels */
+}
+
+.social-icons {
+  margin-top: 0.5em; /* Adjusted to bring icons closer to the paragraph */
+  display: flex;
+  gap: 0.5em; /* Space between social icons */
+  align-items: center; /* Align items vertically center if needed */
+}
+
+.social-icons a {
+  color: #333;
+  margin: 0; /* Remove extra margin */
+}
+
+.btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+/* About Section Styling */
+.about .container {
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.about .left {
+  flex: 1;
+  margin-left: 5%; /* Space between picture and text */
+  display: flex;
+  justify-content: flex-start; /* Align image within the flex container */
+}
+
+.about .left img {
+  max-width: 100%; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.about .right {
+  flex: 2;
+}
+
+.about .right h1 {
+  margin-left: 150px;
+  font-size: 20px;
+}
+
+.about .right h2,
+.about .right p {
+  margin-bottom: 1%; /* Space between elements */
+  margin-left: 20%;
+  font-size: 18px;
+}
+
+.about .socials,
+.about .btn-secondary {
+  margin-left: 20%; /* Set margin-left to 20% */
+}
+
+/* Social Icons Styling */
+.socials {
+  display: flex;
+  gap: 0.5em;
+  align-items: center; /* Align items vertically center if needed */
+}
+
+.socials a {
+  color: #333;
+  margin: 0; /* Remove extra margin */
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+/* Services Section Styling */
+.services {
+  padding: 2em;
+  background: #fff;
+  font-size: 16px; /* Match the font size */
+}
+
+.card-grid {
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Skills Section Styling */
+.skills, .education, .experience, .contact {
+  padding: 2em;
+  background: #f9f9f9;
+  font-size: 16px; /* Match the font size */
+}
+
+.skills-grid, .experience-grid {
+  display: flex;
+  gap: 1em;
+}
+
+.skill-item, .experience-item {
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* Education Section Styling */
+.education-content {
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 16px; /* Match the font size */
+}
+
+/* Contact Section Styling */
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-content input, 
+.contact-content textarea {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 50%; /* Adjust the width of text boxes */
+}
+
+.contact-content button {
+  background: #007bff;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%; /* Adjust the width of button */
+}
+
+.contact-content button:hover {
+  background: #0056b3;
+}
+
+/* Logo Styling */
+.logo img {
+  height: 50px; /* Adjust the height as needed */
+  width: 60px; /* Maintain aspect ratio */
+  display: block; /* Ensure it is not inline */
+  margin: 0 auto; /* Center the logo if needed */
+}

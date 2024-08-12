@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     {% load static %}
+    <link rel="stylesheet" href="{% static 'utilities.css' %}">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <title>Portfolio Website</title>
 </head>
@@ -25,7 +26,7 @@
 
     <section id="home" class="home">
         <div class="home-img">
-            <img src="{% static 'leonard.jpg' %}" alt="Leonard Nshindano">
+            <img src="{% static 'images/leonard.jpg' %}" alt="Leonard Nshindano">
         </div>
         <div class="home-content">
             <h1>LEONARD NSHINDANO</h1>
@@ -49,10 +50,10 @@
     <section id="about" class="about">
         <div class="container">
             <div class="left">
-                <img src="{% static 'grad.jpg' %}" height="400px" alt="Profile picture of Leonard Nshindano">
+                <img src="{% static 'images/grad.jpg' %}" height="400px" alt="Profile picture of Leonard Nshindano">
             </div>
             <div class="right">
-                <h1>ABOUT <span>ME</span></h1><br>
+                <h1>ABOUT <span>ME</span></h1>
                 <h2>Hello! I'm Leonard Nshindano.</h2>
                 <p>Problem Solving: With an analytical approach, I am adept at identifying problems and developing effective solutions to address them.
                   <br>Interests: Outside of my professional life, I engage in various activities that contribute to my personal growth and well-being.<br>
@@ -172,11 +173,9 @@
             <div class="contact-content">
                 <h2>Get in Touch</h2>
                 <p>Feel free to reach out for collaborations or just a friendly chat.</p>
-                <form action="mailto:example@gmail.com" method="post" enctype="text/plain">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
                     <form method="post" action="{% url 'contact' %}">
                         {% csrf_token %}
                         {{ form.as_p }}
