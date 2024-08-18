@@ -1,4 +1,27 @@
-myvenv/
-
+# Python files
+*.pyc
+*.pyo
 __pycache__/
 
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+
+# Environment variables
+.env
+
+# Static files
+staticfiles/
+
+# Media files
+media/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/

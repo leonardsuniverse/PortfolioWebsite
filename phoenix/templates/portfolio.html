@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'utilities.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <title>Portfolio Website</title>
 </head>
@@ -30,35 +29,35 @@
         </div>
         <div class="home-content">
             <h1>LEONARD NSHINDANO</h1>
-            <h3 class="typing-text">I'm an <span>I.T Specialist</span></h3>
+            <h2 class="typing-text">I'm an <span>I.T Specialist</span></h2>
             <p>As a dedicated data scientist with a Bachelor's degree in Computer Science. I specialize in data analysis, machine learning, and visualization,
                 using Python and SQL to derive actionable insights from complex datasets. My professional experience includes key roles in data management and technical support for major projects,
                 such as the 2022 Zambia Population and Housing Census and the 2021 General Elections. Passionate about solving problems and continuously learning, I bring a detail-oriented and analytical approach to every project.
                 Explore my work and see how I can contribute to your data-driven decision-making processes.</p>
             
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/leonard-nshindano-a928882a8"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/leonardsuniverse/datascience_and_machinelearning"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <br>
-            <a href="#contact" class="btn">Hire me</a>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/leonard-nshindano-a928882a8"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/leonardsuniverse/datascience_and_machinelearning"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="#contact" class="btn">Hire me</a>
+                
         </div>
     </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <div class="left">
-                <img src="{% static 'images/grad.jpg' %}" height="400px" alt="Profile picture of Leonard Nshindano">
+                    <div class="left">
+                <img src="{% static 'images/grad.jpg' %}" height="250px" alt="Profile picture of Leonard Nshindano">
             </div>
-            <div class="right">
+                <div class="right">
                 <h1>ABOUT <span>ME</span></h1>
                 <h2>Hello! I'm Leonard Nshindano.</h2>
-                <p>Problem Solving: With an analytical approach, I am adept at identifying problems and developing effective solutions to address them.
-                  <br>Interests: Outside of my professional life, I engage in various activities that contribute to my personal growth and well-being.<br>
-                    I am committed to leveraging my technical expertise and diverse interests to drive innovation and deliver results in any role I undertake. Whether it's managing IT infrastructure, leading a team, or optimizing processes, I approach every challenge with determination and a solution-oriented mindset.</p>
-                <div>
+                <p>Problem Solving: With an analytical approach, I am adept at identifying problems and developing
+                  effective solutions to address them. Interests: Outside of my professional life, I engage in various activities that contribute to my personal growth and well-being.
+                    I am committed to leveraging my technical expertise and diverse interests to drive innovation and deliver results in any role I undertake. Whether it's managing IT infrastructure, 
+                    leading a team, or optimizing processes, I approach every challenge with determination and a solution-oriented mindset.</p>
+                <div><br>
                     <a href="{% static 'cv/leonard-cv.pdf' %}" class="btn btn-secondary" download>DOWNLOAD CV</a>
                 </div><br>
                 <div class="socials">
@@ -68,13 +67,13 @@
                     <a href="#"><img src="{% static 'images/media-player.png' %}" width="40px" alt="Media Player"></a>
                 </div>
             </div>
-        </div>
     </section>
 
     <section id="services" class="services">
         <div class="container">
-            <h1 class="services-head">Services</h1>
-            <p>Turning Challenges into Opportunities.</p>
+            <h1 class="services-head">SERVICES</h1>
+            <h1 class="services-head"><p>Turning Challenges into Opportunities</p></h1>
+            
             <br>
             <div class="card-grid">
                 <div class="card">
@@ -167,24 +166,23 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h1 class="contact-head">Contact</h1>
-            <div class="contact-content">
-                <h2>Get in Touch</h2>
-                <p>Feel free to reach out for collaborations or just a friendly chat.</p>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <form method="post" action="{% url 'contact' %}">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </form>
-            </div>
-        </div>
-    </section>
+<section id="contact" class="contact">
+    <div class="container">
+        <h1 class="contact-head">Contact</h1>
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2024 Leonard Nshindano. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

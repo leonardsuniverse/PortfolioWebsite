@@ -3,11 +3,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-%x5v#tgm12-*a0_(=zi8uu&*7%=h%qgm&ky(j@chro312(a$=h"
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'fallback-secret-key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'Leonard8888.pythonanywhere.com']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000','Leonard8888.pythonanywhere.com']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -81,7 +81,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'phoenix/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Additional locations for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'phoenix/static'),]
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -89,13 +93,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-
 # Email backend settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'leonardnshindano16@gmail.com'
-EMAIL_HOST_PASSWORD = 'leonardnshindano16@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_HOST_PASSWORD', 'fallback_password')
 DEFAULT_FROM_EMAIL = 'leonardnshindano16@gmail.com'
-
