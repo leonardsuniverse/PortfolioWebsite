@@ -5,9 +5,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'fallback-secret-key')
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000','Leonard8888.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",

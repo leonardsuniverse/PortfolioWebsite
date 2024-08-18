@@ -127,417 +127,318 @@ header .logo img {
 
 /* Home Section Styles */
 .home {
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: row; /* Change to row to align items horizontally */
 }
 
 .home-img {
-  margin-bottom: 1rem;
+    margin-right: 300px; /* Add margin to the right of the image */
+
 }
 
 .home-img img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
+    width: 400%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 300px; 
 }
 
 .home-content {
-  max-width: 100%;
+    max-width: 100%;
+    margin-left: 100px;
+    padding-right: 220px;
+    
 }
 
 .home-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .home-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .home-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+   
 }
 
-.home-content .social-icons a {
-  margin: 0 0.5rem;
-  color: var(--white);
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-/* Social Icons Styles */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0;
+.home-content .social-icons {
+    margin: 1.5rem 0;
 }
 
 .social-icons a {
-  margin: 0 0.5rem;
-  color: var(--white);
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    margin: 0 0.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: var(--primary);
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: 2px solid transparent;
-  outline: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-  background-color: var(--primary);
-  color: var(--secondary);
-  text-align: center;
-}
-
-.btn:hover {
-  background: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
+    color: var(--primary);
 }
 
 /* About Section Styles */
-.about {
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.about-img {
-  margin-bottom: 1rem;
+.about-container .left,
+.about-container .right {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
 }
 
-.about .left img {
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  border-radius: 0%;
-  object-fit: cover;
-  margin: 0 auto;
+.about-container .left img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-left: 320px;
+    margin-bottom: 100px;
 }
 
-.about .right {
-  flex: 2;
-  padding-top: 10px;
-  text-align: center;
-  margin: 0 auto;
+.about-container .right {
+    max-width: 600px;
+    margin-right: 200px;
 }
 
-.about-content {
-  margin-top: 2rem;
-  max-width: 100%;
-  line-height: 1.6;
+.about-container .right h1 {
+    margin-bottom: 10px;
 }
 
-.about-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.about-container .right p {
+    margin-bottom: 15px;
 }
 
-.about-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+.about-container .right .btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.about-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.about-container .socials {
+    margin-top: 20px;
+}
+
+.about-container .socials a {
+    margin-right: 10px;
 }
 
 /* Services Section Styles */
 .services {
-  padding: 3rem 0;
-  background-color: var(--bgLight);
+    padding: 3rem 0;
+    background-color: var(--bgLight);
 }
 
 .services-head {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .card img {
-  max-width: 100px;
-  margin-bottom: 1rem;
+    max-width: 100px;
+    margin-bottom: 1rem;
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .card p {
-  line-height: 1.7;
+    line-height: 1.7;
 }
 
 /* Skills Section Styles */
 .skills {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .skills-head {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-item {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .skill-item h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .skill-item b {
-  display: block;
-  margin-bottom: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .skill-item p {
-  font-size: 1rem;
-  line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Education Section Styles */
 .education {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .education-head {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .education-content {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .education-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Experience Section Styles */
 .experience {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .experience-head {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .experience-item {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .experience-item h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .experience-item p {
-  font-size: 1rem;
-  line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Contact Section Styles */
 .contact {
-  padding: 2rem 0;
-  background-color: var(--bgLight);
+    padding: 2rem 0;
+    background-color: var(--bgLight);
 }
 
 .contact-head {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-right: 570px;
 }
 
 .contact form {
-  max-width: 100%;
-  margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .contact input, .contact textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+    width: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .contact button {
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 200px;
 }
 
 /* Footer Styles */
 footer {
-  padding: 1rem;
-  background-color: var(--bgDark);
-  color: var(--white);
-  text-align: center;
+    padding: 1rem;
+    background-color: var(--bgDark);
+    color: var(--white);
+    text-align: center;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .container {
-      padding: 0 10px;
-  }
+    .container {
+        padding: 0 10px;
+    }
 
-  .home {
-      flex-direction: column;
-      padding: 1rem;
-  }
+    .home {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
 
-  .home-img img {
-      max-width: 100%;
-      height: auto;
-  }
+    .home-img {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Add margin below the image on smaller screens */
+    }
 
-  .home-content h1 {
-      font-size: 1.8rem;
-  }
+    .about .left {
+        margin-bottom: 1rem;
+    }
 
-  .home-content h3 {
-      font-size: 1.2rem;
-  }
-
-  .home-content p {
-      font-size: 0.9rem;
-  }
-
-  .about {
-      flex-direction: column;
-      padding: 1rem;
-  }
-
-  .about .left img {
-      max-width: 100%;
-  }
-
-  .about .right {
-      margin: 1rem 0;
-  }
-
-  .about-content {
-      margin: 1rem 0;
-  }
-
-  .services-head,
-  .skills-head,
-  .education-head,
-  .experience-head {
-      font-size: 1.5rem;
-  }
-
-  .card, .skill-item, .experience-item, .education-content {
-      padding: 1rem;
-  }
-
-  .card-grid, .skills-grid, .experience-grid {
-      grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  header nav {
-      flex-direction: column;
-  }
-
-  header nav a {
-      padding: 0.5rem;
-      font-size: 0.9rem;
-  }
-
-  .home-content h1 {
-      font-size: 1.6rem;
-  }
-
-  .home-content h3 {
-      font-size: 1rem;
-  }
-
-  .home-content p {
-      font-size: 0.8rem;
-  }
-
-  .card img {
-      max-width: 80px;
-  }
-
-  .skill-item h2,
-  .experience-item h2,
-  .education-content h2 {
-      font-size: 1.3rem;
-  }
-
-  .skill-item p,
-  .experience-item p {
-      font-size: 0.9rem;
-  }
+    .about .right {
+        margin-top: 2rem;
+        text-align: center;
+    }
 }

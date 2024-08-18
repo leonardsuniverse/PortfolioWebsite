@@ -15,7 +15,7 @@ def contact(request):
             email = form.cleaned_data.get('email', '')
             subject = form.cleaned_data.get('subject', '')
             message = form.cleaned_data.get('message', '')
-            
+
             # Save the new entry in the database
             ContactEntry.objects.create(name=name, email=email, subject=subject, message=message)
 
