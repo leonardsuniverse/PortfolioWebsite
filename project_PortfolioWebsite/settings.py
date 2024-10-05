@@ -102,3 +102,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'leonardnshindano16@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_HOST_PASSWORD', 'fallback_password')
 DEFAULT_FROM_EMAIL = 'leonardnshindano16@gmail.com'
+SESSION_COOKIE_SECURE = True
